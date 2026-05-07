@@ -1982,17 +1982,6 @@ h2 {
   opacity: 0.94;
 }
 
-.placeholder-truck::after {
-  content: "DRIVE HARD.\A EARN MORE.";
-  left: 8vw;
-  top: 92px;
-  color: rgba(255, 255, 255, 0.82);
-  font-family: "Roboto Condensed", var(--sans-ja);
-  font-size: clamp(48px, 8vw, 116px);
-  line-height: 0.92;
-  letter-spacing: 0.04em;
-}
-
 .placeholder-truck span {
   right: 9vw;
   bottom: 70px;
@@ -2962,6 +2951,659 @@ h3,
   }
 }
 
+/* Requested FV and typography refinements */
+.site-header {
+  color: #061a33;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid rgba(0, 43, 92, 0.12);
+}
+
+.brand-mark {
+  background: #002b5c;
+}
+
+.header-cta {
+  min-width: 132px;
+  color: #ffffff;
+  background: #06c755;
+  border-color: #06c755;
+  font-family: var(--sans-ja);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+.hero-section {
+  color: #061a33;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 249, 253, 0.92) 52%, rgba(201, 222, 244, 0.82) 100%);
+}
+
+.hero-section .section-kicker {
+  display: inline-flex;
+  padding: 10px 16px;
+  color: #ffffff;
+  background: #002b5c;
+  box-shadow: 0 10px 24px rgba(0, 43, 92, 0.16);
+}
+
+.hero-section::after {
+  content: "LOGISTICS";
+  color: rgba(30, 136, 229, 0.1);
+}
+
+.hero-section::before {
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(30, 136, 229, 0.72) 46%, rgba(255, 255, 255, 0.88) 50%, rgba(30, 136, 229, 0.72) 54%, transparent 100%);
+}
+
+.placeholder-truck {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.18) 44%, rgba(0, 43, 92, 0.2) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 43, 92, 0.2)),
+    url("assets/hero-truck.png") center / cover no-repeat;
+}
+
+.placeholder-truck::before {
+  display: block;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: auto;
+  height: auto;
+  background:
+    radial-gradient(circle at 70% 22%, rgba(30, 136, 229, 0.22), transparent 28%),
+    linear-gradient(125deg, transparent 0 45%, rgba(30, 136, 229, 0.5) 45.2% 45.7%, transparent 46% 100%),
+    linear-gradient(135deg, transparent 0 58%, rgba(102, 184, 255, 0.45) 58.2% 58.7%, transparent 59% 100%);
+  clip-path: none;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.placeholder-truck::after {
+  content: "次世代の物流へ";
+  left: 18px;
+  top: auto;
+  bottom: 86px;
+  color: rgba(0, 43, 92, 0.88);
+  font-family: var(--serif-ja);
+  font-size: clamp(28px, 8vw, 70px);
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  text-shadow: none;
+}
+
+.placeholder-truck span {
+  color: #ffffff;
+  background: rgba(0, 43, 92, 0.72);
+  border-color: rgba(102, 184, 255, 0.72);
+}
+
+.hero-copy h1,
+.section-heading h2,
+.center-heading h2,
+.message-side h2,
+.final-cta-inner h2 {
+  font-size: clamp(28px, 7.4vw, 44px);
+  line-height: 1.42;
+  letter-spacing: 0.03em;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  line-break: strict;
+}
+
+.hero-copy .body-copy {
+  color: #34445a;
+}
+
+.hero-copy .strong-copy {
+  color: #061a33;
+}
+
+.number-card span,
+.number-card p {
+  font-family: var(--serif-ja);
+  line-height: 1.35;
+  letter-spacing: 0.04em;
+}
+
+.number-card span {
+  font-weight: 700;
+}
+
+.final-message p {
+  font-family: var(--serif-ja);
+  line-height: 1.55;
+  letter-spacing: 0.06em;
+}
+
+.floating-line {
+  width: 76px;
+  height: 76px;
+  flex-direction: column;
+  gap: 1px;
+  font-family: var(--sans-ja);
+  font-size: 13px;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.floating-line span {
+  display: block;
+  padding-bottom: 1px;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.floating-line span::before,
+.floating-line span::after {
+  content: "\\";
+  display: inline-block;
+  margin: 0 1px;
+}
+
+.floating-line span::after {
+  content: "/";
+}
+
+@media (max-width: 899px) {
+  .hero-section {
+    padding-bottom: 56px;
+  }
+
+  .hero-layout {
+    display: grid;
+  }
+
+  .hero-visual {
+    order: -1;
+    min-height: auto;
+    height: auto;
+  }
+
+  .placeholder-truck {
+    height: min(68vh, 560px);
+    min-height: 430px;
+    background-position: 58% center;
+  }
+
+  .placeholder-truck::after {
+    left: 18px;
+    bottom: 62px;
+    max-width: 8em;
+  }
+
+  .hero-copy {
+    margin-top: -18px;
+    padding: 26px 20px 0;
+    background: rgba(255, 255, 255, 0.94);
+  }
+
+  .hero-copy h1,
+  .section-heading h2,
+  .center-heading h2,
+  .message-side h2,
+  .final-cta-inner h2 {
+    font-size: clamp(26px, 7vw, 34px);
+  }
+
+  .hero-copy .body-copy {
+    margin-top: 22px;
+  }
+}
+
+/* Requested card polish and solution bridge */
+.solution-section {
+  padding: 78px 0;
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(0, 27, 58, 0.96), rgba(0, 72, 140, 0.92)),
+    #002b5c;
+}
+
+.solution-section::before {
+  opacity: 0.24;
+}
+
+.solution-inner {
+  display: grid;
+  gap: 22px;
+}
+
+.solution-inner h2 {
+  max-width: 760px;
+  color: #ffffff;
+}
+
+.solution-inner > p:not(.section-kicker) {
+  max-width: 680px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 2;
+}
+
+.solution-points {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 12px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.solution-points span {
+  display: grid;
+  min-height: 82px;
+  place-items: center;
+  color: #ffffff;
+  font-family: var(--serif-ja);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: rgba(0, 27, 58, 0.38);
+}
+
+.number-card span {
+  color: #c59a1b;
+}
+
+.number-card {
+  background:
+    linear-gradient(135deg, #ffffff 0%, #f5f6f7 55%, #e2e5e8 100%);
+}
+
+.salary-card::after {
+  display: none;
+}
+
+.salary-card {
+  background:
+    linear-gradient(135deg, #ffffff 0%, #f7f7f7 64%, #e8eaed 100%);
+}
+
+.salary-card p {
+  color: #101010;
+}
+
+.chance-card-panel {
+  background: #6f7378;
+}
+
+.chance-card-panel article {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03)),
+    #74777b;
+}
+
+.chance-card-panel article span {
+  color: #d7a915;
+  font-size: 44px;
+}
+
+.chance-card-panel article::after {
+  border-color: rgba(215, 169, 21, 0.44);
+}
+
+.chance-card-panel .section-kicker {
+  color: #d7a915;
+}
+
+@media (max-width: 899px) {
+  .solution-section {
+    padding: 62px 0;
+  }
+
+  .solution-points {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .solution-points span {
+    min-height: 68px;
+    font-size: 18px;
+  }
+}
+
+/* Main visual replacement and alignment refinements */
+.hero-section {
+  min-height: 100svh;
+  padding: 0;
+  background: #ffffff;
+}
+
+.hero-section > .section-inner {
+  width: 100%;
+}
+
+.hero-layout {
+  display: block;
+  width: 100%;
+}
+
+.hero-visual {
+  order: initial;
+  width: 100%;
+  height: 100svh;
+  min-height: 620px;
+}
+
+.placeholder-truck {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.34) 0%, rgba(255, 255, 255, 0.06) 44%, rgba(0, 43, 92, 0.12) 100%),
+    url("assets/main-visual.png") center / cover no-repeat;
+}
+
+.placeholder-truck::before {
+  display: none;
+}
+
+.placeholder-truck::after {
+  content: "次世代の運送会社で\A 共に挑戦しませんか？";
+  left: 5vw;
+  right: 5vw;
+  top: 43%;
+  bottom: auto;
+  z-index: 3;
+  width: min(90vw, 1120px);
+  max-width: none;
+  padding: 26px 46px 30px;
+  color: #061a33;
+  font-size: clamp(34px, 5.6vw, 82px);
+  line-height: 1.34;
+  letter-spacing: 0.06em;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 24px 60px rgba(0, 43, 92, 0.18);
+  transform: rotate(-3.5deg);
+  transform-origin: left center;
+  text-shadow: none;
+}
+
+.hero-copy {
+  position: relative;
+  width: min(100% - 40px, 760px);
+  margin: -4vh auto 0;
+  padding: 34px 24px 64px;
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(0, 27, 58, 0.96), rgba(0, 43, 92, 0.92));
+  box-shadow: 0 -20px 50px rgba(0, 27, 58, 0.18);
+}
+
+.hero-copy h1,
+.hero-copy .body-copy,
+.hero-copy .strong-copy {
+  color: #ffffff;
+}
+
+.hero-metrics div {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-metrics span {
+  color: #c59a1b;
+}
+
+.center-heading,
+#second-phase .center-heading,
+#numbers .center-heading,
+#members .center-heading {
+  text-align: center;
+}
+
+#environment .strong-copy,
+#second-phase .strong-copy,
+#numbers .strong-copy,
+#members .strong-copy {
+  text-align: center;
+}
+
+#environment .strong-copy::before,
+#second-phase .strong-copy::before,
+#numbers .strong-copy::before,
+#members .strong-copy::before {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#second-phase .body-copy,
+#numbers .body-copy,
+#members .body-copy {
+  text-align: center;
+}
+
+.final-message {
+  display: grid;
+  place-items: center;
+  padding: clamp(28px, 6vw, 52px);
+}
+
+.final-message p {
+  max-width: 100%;
+  font-size: clamp(25px, 5.4vw, 46px);
+  line-height: 1.45;
+  overflow-wrap: normal;
+}
+
+.btn-line::after,
+.final-cta-section .btn-line::after,
+.floating-line::after {
+  content: none;
+}
+
+@media (max-width: 899px) {
+  .hero-visual {
+    height: 82svh;
+    min-height: 560px;
+  }
+
+  .placeholder-truck {
+    background-position: 62% center;
+  }
+
+  .placeholder-truck::after {
+    left: 16px;
+    right: 16px;
+    top: 43%;
+    bottom: auto;
+    width: calc(100% - 32px);
+    max-width: none;
+    padding: 16px 20px 18px;
+    font-size: clamp(27px, 8vw, 42px);
+    transform: rotate(-4deg);
+  }
+
+  .hero-copy {
+    width: min(100% - 28px, 760px);
+    margin-top: -28px;
+    padding: 28px 18px 50px;
+  }
+}
+
+@media (max-width: 390px) {
+  .placeholder-truck::after {
+    top: 42%;
+    font-size: 25px;
+  }
+
+  .final-message p {
+    font-size: 24px;
+  }
+}
+
+/* FV two-line copy bands */
+.placeholder-truck::after {
+  content: none !important;
+}
+
+.hero-image-copy {
+  position: absolute;
+  left: 5vw;
+  top: 42%;
+  z-index: 4;
+  display: grid;
+  gap: 12px;
+  transform: rotate(-3.5deg);
+  transform-origin: left center;
+}
+
+.hero-image-copy span {
+  display: block;
+  width: fit-content;
+  padding: 14px 30px 18px;
+  color: #061a33;
+  font-family: var(--serif-ja);
+  font-size: clamp(34px, 5.6vw, 82px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+  background:
+    linear-gradient(100deg, rgba(255, 255, 255, 0.98), rgba(235, 245, 255, 0.95));
+  border-left: 6px solid #c59a1b;
+  box-shadow: 0 22px 54px rgba(0, 43, 92, 0.2);
+}
+
+.hero-image-copy span:nth-child(2) {
+  margin-left: 5vw;
+}
+
+@media (max-width: 899px) {
+  .hero-image-copy {
+    left: 16px;
+    right: 16px;
+    top: 42%;
+    gap: 9px;
+    transform: rotate(-4deg);
+  }
+
+  .hero-image-copy span {
+    max-width: calc(100vw - 48px);
+    padding: 11px 16px 14px;
+    font-size: clamp(27px, 8vw, 42px);
+    line-height: 1.12;
+    border-left-width: 5px;
+  }
+
+  .hero-image-copy span:nth-child(2) {
+    margin-left: 7vw;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-image-copy span {
+    font-size: 25px;
+  }
+}
+
+/* Extra visual motion polish */
+@keyframes fvSlowDrive {
+  0% {
+    background-position: center center;
+    filter: saturate(1) contrast(1);
+  }
+  100% {
+    background-position: 54% center;
+    filter: saturate(1.08) contrast(1.04);
+  }
+}
+
+@keyframes bandSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-28px) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(-3.5deg);
+  }
+}
+
+@keyframes softFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.hero-section .placeholder-truck {
+  animation: fvSlowDrive 8s ease-in-out alternate infinite;
+}
+
+.hero-section .placeholder-truck::after {
+  animation: bandSlideIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
+}
+
+.worry-card,
+.feature-card,
+.number-card,
+.salary-card,
+.roadmap-item,
+.member-card,
+.chance-card-panel article,
+.solution-points span {
+  transition:
+    transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.worry-card:hover,
+.feature-card:hover,
+.number-card:hover,
+.salary-card:hover,
+.roadmap-item:hover,
+.member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(0, 43, 92, 0.14);
+  border-color: rgba(197, 154, 27, 0.42);
+}
+
+.solution-points span {
+  animation: softFloat 3.2s ease-in-out infinite;
+}
+
+.solution-points span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.solution-points span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.solution-points span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+@media (max-width: 899px) {
+  @keyframes bandSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-18px) rotate(-5deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0) rotate(-4deg);
+    }
+  }
+
+  .hero-section .placeholder-truck {
+    animation-duration: 7s;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-copy h1,
+  .section-heading h2,
+  .center-heading h2,
+  .message-side h2,
+  .final-cta-inner h2 {
+    font-size: 25px;
+  }
+}
+
 /* Compact mobile layout and premium item cards */
 .header-cta {
   color: #ffffff;
@@ -3206,5 +3848,806 @@ h3,
   .feature-card p,
   .roadmap-item p {
     font-size: 12px;
+  }
+}
+
+/* Final requested overrides */
+.hero-section {
+  color: #061a33;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(102, 184, 255, 0.24), transparent 32%),
+    linear-gradient(120deg, #ffffff 0%, #f5f9fd 48%, #d9e9fb 100%);
+}
+
+.hero-section .section-kicker {
+  color: #ffffff;
+  background: #002b5c;
+}
+
+.hero-section .section-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 1px;
+  margin-right: 8px;
+  background: rgba(255, 255, 255, 0.76);
+  vertical-align: middle;
+}
+
+.placeholder-truck {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.36) 42%, rgba(0, 43, 92, 0.08) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 43, 92, 0.14)),
+    url("assets/hero-truck.png") center / cover no-repeat;
+}
+
+.placeholder-truck::before {
+  display: block;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(118deg, transparent 0 52%, rgba(30, 136, 229, 0.62) 52.2% 52.7%, transparent 53% 100%),
+    linear-gradient(128deg, transparent 0 59%, rgba(102, 184, 255, 0.54) 59.2% 59.6%, transparent 60% 100%),
+    radial-gradient(circle at 70% 16%, rgba(30, 136, 229, 0.22), transparent 28%),
+    repeating-radial-gradient(circle at 72% 10%, rgba(0, 43, 92, 0.08) 0 1px, transparent 1px 11px);
+  pointer-events: none;
+}
+
+.placeholder-truck::after {
+  content: "次世代の運送会社で\A 共に挑戦しませんか？";
+  color: rgba(0, 43, 92, 0.9);
+  font-family: var(--serif-ja);
+  font-size: clamp(26px, 7vw, 62px);
+  line-height: 1.28;
+  letter-spacing: 0.08em;
+  text-shadow: 0 8px 22px rgba(255, 255, 255, 0.72);
+}
+
+.hero-copy h1,
+.section-heading h2,
+.center-heading h2,
+.message-side h2,
+.final-cta-inner h2 {
+  font-family: var(--serif-ja);
+  font-size: clamp(26px, 6.7vw, 38px);
+  line-height: 1.48;
+  letter-spacing: 0.035em;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  line-break: strict;
+  text-wrap: pretty;
+}
+
+.hero-copy .body-copy,
+.hero-copy .strong-copy {
+  color: #061a33;
+}
+
+.section-heading p,
+.center-heading p,
+.body-copy p,
+.strong-copy,
+.lead,
+.feature-card p,
+.roadmap-item p,
+.member-card p,
+.salary-card p,
+.number-card p {
+  line-break: strict;
+}
+
+.number-card span,
+.number-card p {
+  font-family: var(--serif-ja);
+  color: #061a33;
+}
+
+.number-card span {
+  font-size: clamp(22px, 7vw, 32px);
+  line-height: 1.38;
+}
+
+.number-card p {
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.final-message p {
+  font-family: var(--serif-ja);
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.btn-line,
+.final-cta-section .btn-line {
+  font-family: var(--sans-ja);
+}
+
+.floating-line {
+  width: 78px;
+  height: 78px;
+  color: #ffffff;
+  background: #06c755;
+}
+
+.floating-line span {
+  font-size: 10px;
+}
+
+@media (max-width: 899px) {
+  .hero-visual,
+  .placeholder-truck {
+    height: min(66vh, 520px);
+    min-height: 390px;
+  }
+
+  .placeholder-truck {
+    background-position: 60% center;
+  }
+
+  .placeholder-truck::after {
+    left: 18px;
+    bottom: 54px;
+    max-width: 8em;
+  }
+
+  .hero-copy {
+    margin-top: -8px;
+    background: rgba(255, 255, 255, 0.96);
+  }
+
+  .hero-metrics span {
+    color: #002b5c;
+  }
+
+  .hero-metrics div {
+    background: rgba(255, 255, 255, 0.94);
+  }
+
+  .hero-metrics p {
+    color: #34445a;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-copy h1,
+  .section-heading h2,
+  .center-heading h2,
+  .message-side h2,
+  .final-cta-inner h2 {
+    font-size: 24px;
+  }
+}
+
+/* 01 section final visual adjustment */
+.hero-section {
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 86% 18%, rgba(102, 184, 255, 0.26), transparent 30%),
+    linear-gradient(135deg, #001b3a 0%, #002b5c 58%, #004c91 100%);
+}
+
+.hero-section .section-kicker {
+  color: #c59a1b;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
+.hero-section .section-kicker::before {
+  background: #c59a1b;
+}
+
+.hero-copy {
+  background: transparent;
+}
+
+.hero-copy h1,
+.hero-copy .body-copy,
+.hero-copy .strong-copy {
+  color: #ffffff;
+}
+
+.hero-metrics {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.hero-metrics div {
+  background: rgba(0, 27, 58, 0.54);
+}
+
+.hero-metrics span {
+  color: #c59a1b;
+}
+
+.hero-metrics p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.placeholder-truck {
+  background:
+    linear-gradient(90deg, rgba(0, 27, 58, 0.22) 0%, rgba(0, 43, 92, 0.06) 48%, rgba(0, 43, 92, 0.16) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 27, 58, 0.14)),
+    url("assets/hero-truck.png") center / cover no-repeat;
+}
+
+.placeholder-truck::after {
+  left: clamp(16px, 4vw, 48px);
+  right: clamp(16px, 8vw, 120px);
+  bottom: clamp(84px, 12vw, 120px);
+  max-width: min(90%, 760px);
+  color: #ffffff;
+  font-size: clamp(34px, 7.4vw, 76px);
+  line-height: 1.35;
+  text-shadow: 0 12px 34px rgba(0, 27, 58, 0.74);
+}
+
+@media (max-width: 899px) {
+  .hero-copy {
+    margin-top: 0;
+    padding: 28px 20px 0;
+    background: transparent;
+  }
+
+  .placeholder-truck::after {
+    left: 18px;
+    right: 18px;
+    bottom: 96px;
+    max-width: calc(100% - 36px);
+    font-size: clamp(32px, 9.4vw, 46px);
+  }
+
+  .placeholder-truck span {
+    bottom: 28px;
+  }
+}
+
+@media (max-width: 390px) {
+  .placeholder-truck::after {
+    bottom: 90px;
+    font-size: 30px;
+  }
+}
+
+/* Final FV lock: full-bleed image with angled white copy band */
+.hero-section {
+  min-height: 100svh;
+  padding: 0;
+  color: #061a33;
+  background: #ffffff;
+}
+
+.hero-section > .section-inner {
+  width: 100%;
+}
+
+.hero-layout {
+  display: block;
+  width: 100%;
+}
+
+.hero-visual {
+  width: 100%;
+  height: 100svh;
+  min-height: 620px;
+}
+
+.placeholder-truck {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.34) 0%, rgba(255, 255, 255, 0.06) 44%, rgba(0, 43, 92, 0.1) 100%),
+    url("assets/main-visual.png") center center / cover no-repeat;
+}
+
+.placeholder-truck::before {
+  display: none;
+}
+
+.placeholder-truck::after {
+  content: "次世代の運送会社で\A 共に挑戦しませんか？";
+  left: 5vw;
+  right: auto;
+  bottom: 14vh;
+  z-index: 3;
+  max-width: min(86vw, 980px);
+  padding: 22px 36px;
+  color: #061a33;
+  font-family: var(--serif-ja);
+  font-size: clamp(34px, 5.6vw, 82px);
+  line-height: 1.34;
+  letter-spacing: 0.06em;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 24px 60px rgba(0, 43, 92, 0.18);
+  transform: rotate(-3.5deg);
+  transform-origin: left center;
+  text-shadow: none;
+}
+
+.hero-copy {
+  position: relative;
+  width: min(100% - 40px, 760px);
+  margin: -4vh auto 0;
+  padding: 34px 24px 64px;
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(0, 27, 58, 0.96), rgba(0, 43, 92, 0.92));
+  box-shadow: 0 -20px 50px rgba(0, 27, 58, 0.18);
+}
+
+.hero-copy h1,
+.hero-copy .body-copy,
+.hero-copy .strong-copy {
+  color: #ffffff;
+}
+
+.btn-line::after,
+.final-cta-section .btn-line::after,
+.floating-line::after {
+  content: none;
+}
+
+@media (max-width: 899px) {
+  .hero-visual {
+    height: 62svh;
+    min-height: 430px;
+  }
+
+  .placeholder-truck {
+    background-position: 64% center;
+  }
+
+  .placeholder-truck::after {
+    left: 16px;
+    right: 16px;
+    bottom: 48px;
+    max-width: calc(100% - 32px);
+    padding: 14px 18px 16px;
+    font-size: clamp(27px, 8vw, 42px);
+    background:
+      linear-gradient(100deg, rgba(255, 255, 255, 0.98), rgba(235, 245, 255, 0.94));
+    border-left: 5px solid #c59a1b;
+    transform: rotate(-4deg);
+  }
+
+  .hero-copy {
+    width: min(100% - 28px, 760px);
+    margin-top: -28px;
+    padding: 28px 18px 50px;
+    background:
+      linear-gradient(135deg, rgba(0, 27, 58, 0.96), rgba(0, 43, 92, 0.92));
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-visual {
+    height: 58svh;
+    min-height: 390px;
+  }
+
+  .placeholder-truck {
+    background-position: 66% center;
+  }
+
+  .placeholder-truck::after {
+    bottom: 42px;
+    font-size: 24px;
+  }
+
+  .final-message p {
+    font-size: 24px;
+  }
+}
+
+/* Final FV copy fix: two readable gradient bands */
+.placeholder-truck::after {
+  content: none !important;
+}
+
+.hero-image-copy {
+  position: absolute;
+  left: clamp(18px, 6vw, 92px);
+  top: 34%;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(8px, 1.5vw, 16px);
+  width: min(88vw, 980px);
+  transform: rotate(-2.5deg);
+  transform-origin: left center;
+  pointer-events: none;
+}
+
+.hero-image-copy span {
+  position: static;
+  right: auto;
+  bottom: auto;
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: clamp(10px, 1.5vw, 20px) clamp(18px, 3vw, 44px) clamp(12px, 1.7vw, 22px);
+  color: #061a33;
+  font-family: var(--serif-ja);
+  font-size: clamp(30px, 5.4vw, 76px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  background:
+    linear-gradient(105deg, rgba(255, 255, 255, 0.98) 0%, rgba(241, 248, 255, 0.96) 58%, rgba(211, 234, 255, 0.92) 100%);
+  border: 0;
+  border-left: clamp(5px, 0.7vw, 9px) solid #c59a1b;
+  border-bottom: 1px solid rgba(30, 136, 229, 0.26);
+  box-shadow:
+    0 20px 52px rgba(0, 43, 92, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(2px);
+}
+
+.hero-image-copy span:nth-child(2) {
+  margin-left: clamp(18px, 5vw, 92px);
+}
+
+@media (max-width: 899px) {
+  .hero-image-copy {
+    left: 16px;
+    top: 35%;
+    gap: 8px;
+    width: calc(100vw - 32px);
+    transform: rotate(-2deg);
+  }
+
+  .hero-image-copy span {
+    max-width: calc(100vw - 42px);
+    padding: 10px 14px 12px;
+    font-size: clamp(24px, 7vw, 38px);
+    letter-spacing: 0.02em;
+  }
+
+  .hero-image-copy span:nth-child(2) {
+    margin-left: 22px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-image-copy {
+    top: 34%;
+  }
+
+  .hero-image-copy span {
+    font-size: clamp(22px, 6.8vw, 27px);
+    padding-inline: 12px;
+  }
+}
+
+/* LP conversion copy blocks */
+.hero-cta {
+  margin-top: 28px;
+}
+
+.solution-answer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 22px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.solution-answer-grid article {
+  min-height: 190px;
+  padding: 24px 20px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.04)),
+    rgba(0, 27, 58, 0.34);
+}
+
+.solution-answer-grid span {
+  display: inline-block;
+  color: #c59a1b;
+  font-family: var(--serif-ja);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.solution-answer-grid p {
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.lp-mini-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 34px;
+  padding: 20px;
+  color: #ffffff;
+  background:
+    linear-gradient(120deg, rgba(0, 27, 58, 0.88), rgba(0, 43, 92, 0.74));
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.lp-mini-cta.light {
+  grid-column: 1 / -1;
+  color: #061a33;
+  background:
+    linear-gradient(120deg, rgba(244, 248, 252, 0.95), rgba(255, 255, 255, 0.96));
+  border-color: rgba(0, 43, 92, 0.12);
+}
+
+.lp-mini-cta p {
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.7;
+}
+
+.lp-mini-cta .btn {
+  min-width: 190px;
+  min-height: 54px;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 899px) {
+  .solution-answer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-answer-grid article {
+    min-height: auto;
+    padding: 20px 18px;
+  }
+
+  .solution-answer-grid span {
+    font-size: 18px;
+  }
+
+  .lp-mini-cta {
+    display: grid;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .lp-mini-cta .btn {
+    width: 100%;
+  }
+}
+
+/* Final CTA layout repair */
+.lp-mini-cta,
+.lp-mini-cta.light {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  gap: 22px;
+}
+
+.lp-mini-cta p,
+.lp-mini-cta.light p {
+  width: auto;
+  max-width: 760px;
+  min-width: 0;
+  margin: 0;
+  font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.8;
+  text-align: left;
+  writing-mode: horizontal-tb;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.lp-mini-cta .btn,
+.lp-mini-cta.light .btn {
+  width: auto;
+  min-width: 220px;
+  max-width: 320px;
+  justify-self: end;
+  padding-inline: 28px;
+  white-space: nowrap;
+}
+
+@media (min-width: 900px) {
+  .income-section .lp-mini-cta.light {
+    grid-column: 1 / -1;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 899px) {
+  .lp-mini-cta,
+  .lp-mini-cta.light {
+    grid-template-columns: 1fr;
+  }
+
+  .lp-mini-cta .btn,
+  .lp-mini-cta.light .btn {
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+  }
+}
+
+/* Final responsive safety pass */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+.section,
+.section-inner,
+.message-layout,
+.message-body,
+.final-message,
+.final-cta-inner {
+  min-width: 0;
+}
+
+.message-body {
+  max-width: 100%;
+  overflow: visible;
+}
+
+.final-message {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.final-message p {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: clamp(24px, 4.3vw, 42px);
+  line-height: 1.5;
+  text-align: center;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1100px) {
+  .message-layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .message-side {
+    position: static;
+  }
+
+  .message-body {
+    padding: clamp(24px, 5vw, 42px);
+  }
+}
+
+@media (max-width: 720px) {
+  .section-inner {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .message-section {
+    padding-bottom: 72px;
+  }
+
+  .message-body {
+    padding: 20px 16px;
+  }
+
+  .long-copy {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .long-copy blockquote {
+    padding: 18px 14px;
+    font-size: clamp(20px, 6vw, 25px);
+    line-height: 1.55;
+  }
+
+  .final-message {
+    margin-top: 30px;
+    padding: 24px 14px;
+  }
+
+  .final-message p {
+    font-size: clamp(20px, 6.2vw, 25px);
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+
+  .final-cta-inner h2,
+  .closing-copy {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 390px) {
+  .message-body {
+    padding: 18px 12px;
+  }
+
+  .final-message {
+    padding: 22px 10px;
+  }
+
+  .final-message p {
+    font-size: clamp(19px, 6vw, 23px);
+  }
+}
+
+/* Final brand logo and favicon header styling */
+.brand {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  color: #061a33;
+  font-family: var(--sans-ja);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.12em;
+}
+
+.brand-logo {
+  display: block;
+  width: auto;
+  height: 38px;
+  max-width: 148px;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: inline-block;
+  padding-left: 10px;
+  color: #061a33;
+  border-left: 1px solid rgba(0, 43, 92, 0.22);
+}
+
+@media (max-width: 720px) {
+  .brand {
+    gap: 8px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+
+  .brand-logo {
+    height: 32px;
+    max-width: 116px;
+  }
+
+  .brand-text {
+    padding-left: 8px;
+  }
+}
+
+@media (max-width: 390px) {
+  .brand-logo {
+    height: 29px;
+    max-width: 104px;
+  }
+
+  .brand-text {
+    font-size: 9px;
   }
 }
