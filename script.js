@@ -1,4 +1,10 @@
 // Wireframe helper scripts. Production CTA behavior is expected to be handled in STUDIO.
+window.addEventListener("load", () => {
+  window.setTimeout(() => {
+    document.body.classList.add("is-loaded");
+  }, 1600);
+});
+
 const pageTopButton = document.querySelector(".page-top");
 
 window.addEventListener("scroll", () => {
